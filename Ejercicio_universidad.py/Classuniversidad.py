@@ -1,26 +1,25 @@
-class universidad:
-    def __init__(self,facultad):
-        self.facultad = facultad if facultad is not None else []
-        self.profesor = []
-        
-    def agregar_facultades(self,faculty):
-        self.facultad.append(faculty)
-        print(f'Se ha agregado {faculty} correctamente!!')
-        print(self.facultad)
-    
-    def ver_facultades(self):
-        print(self.facultad)
-
-    def agregar_profesor(self,professor):
-        pass
+class Universidad:
+    def __init__(self, nombre_universidad, facultades):
+        self.nombre_universidad = nombre_universidad
+        self.facultades = facultades if facultades is not None else []
+        # self.lista_facultades = []
 
 
+    def crear_facultad(self, nueva_facultad):
+        self.facultades.append(nueva_facultad)
+        print(f'La nueva facultad de la universidad es {nueva_facultad}\n')
+        print('FACULTADES:')
 
-UFM = universidad(['Economía'])
-UFM.agregar_facultades('Ingenieria')
-UFM.ver_facultades()
-UFM.agregar_profesor('Julio')
-        
+        for i in self.facultades:
+            print(i)
+
+nueva_facultad = input('Qué facultad se agregagará a la universidad? ')  
+
+UFM = Universidad('UFM', ['Ciencias economicas', 'Arquitectura', 'Medicina'])
+UFM.crear_facultad(nueva_facultad)
+
+
+
 
 
 
