@@ -13,7 +13,8 @@ class universidad:
 
 
 
-
+UFM = universidad(['Economía'])
+UFM.agregar_facultades('Ingenieria')
         
 
 
